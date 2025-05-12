@@ -42,7 +42,7 @@ export function MainScreen() {
     const updated = await Promise.all(
       files.map(async (fileEntry) => {
         try {
-          console.log("Processing file:", fileEntry.name);
+
           const text = await getText(fileEntry.file);
           const extractedName = await getPrimaryInsuredFromText(text);
           const match = findBestMatch(extractedName, INSUREDS);
@@ -77,8 +77,10 @@ export function MainScreen() {
     <main className="main">
       <h1 className="title">Insurance Claim Parser</h1>
 
+      {/* Dropzone component to handle file drops */}
       <Dropzone onDrop={handleDrop} />
 
+      {/* File upload section */}
       {files.length > 0 && (
         <div className="dropBox">
           <h2 className="dropBox-heading">Uploaded Files</h2>
@@ -98,7 +100,8 @@ export function MainScreen() {
                       </button>
                     </div>
                   </div>
-
+                  
+                  {/* Displaying the extracted name and matched ID */}
                   {file.extractedName && (
                     <div className="file-result" style={{ marginTop: '0.5rem' }}>
                       <div><strong>Insured:</strong> {file.extractedName}</div>
