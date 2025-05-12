@@ -1,0 +1,83 @@
+/* This is the main page stylesheet, only for components created in mainScreen.tsx*/
+
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem;
+  height:100%;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dropBox {
+  margin-top: 2rem;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.dropBox-heading {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.file-status {
+  font-size: 0.875rem;
+  color: #666;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.file-cancel {
+  background-color: transparent;
+  border: 1px solid red;
+  color: red;
+  padding: 4px 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.file-cancel:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.file-seperator {
+    justify-content: space-between;
+}
+
+.submit {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  padding: 4px 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+.submit:hover {
+  border: 1px solid grey;
+  color: grey;
+}
